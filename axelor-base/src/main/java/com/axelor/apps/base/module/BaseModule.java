@@ -35,6 +35,7 @@ import com.axelor.apps.base.db.repo.BankBaseRepository;
 import com.axelor.apps.base.db.repo.BankRepository;
 import com.axelor.apps.base.db.repo.BaseBatchBaseRepository;
 import com.axelor.apps.base.db.repo.BaseBatchRepository;
+import com.axelor.apps.base.db.repo.DMSFileManagementRepository;
 import com.axelor.apps.base.db.repo.DurationBaseRepository;
 import com.axelor.apps.base.db.repo.DurationRepository;
 import com.axelor.apps.base.db.repo.ICalendarEventManagementRepository;
@@ -158,6 +159,7 @@ import com.axelor.auth.db.repo.UserRepository;
 import com.axelor.auth.pac4j.AuthPac4jUserService;
 import com.axelor.base.service.ical.ICalendarEventService;
 import com.axelor.base.service.ical.ICalendarEventServiceImpl;
+import com.axelor.dms.db.repo.DMSFileRepository;
 import com.axelor.report.ReportGenerator;
 import com.axelor.team.db.repo.TeamTaskRepository;
 
@@ -241,5 +243,6 @@ public class BaseModule extends AxelorModule {
     bind(ImportConfigurationRepository.class).to(ImportConfigurationBaseRepository.class);
     bind(ModelEmailLinkService.class).to(ModelEmailLinkServiceImpl.class);
     bind(PricingService.class).to(PricingServiceImpl.class);
+    bind(DMSFileRepository.class).to(DMSFileManagementRepository.class);
   }
 }
